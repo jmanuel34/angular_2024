@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class BuscadorService {
 
-  constructor(private http:HttpClient){}
+  constructor(private http:HttpClient){
 
+  }
 
-   buscar(tematica:string):Observable<Resultado[]>{
-    let url:string ="http://localhost:9000/buscar/"+tematica;
+  buscar(tematica:string):Observable<Resultado[]>{
+    let url:string="http://localhost:9000/buscar/"+tematica;
     return this.http.get<Resultado[]>(url);
-
   }
 }
