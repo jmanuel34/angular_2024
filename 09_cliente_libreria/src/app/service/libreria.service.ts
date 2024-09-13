@@ -11,7 +11,7 @@ export class LibreriaService {
   constructor(private http:HttpClient) { }
 
   librosPorPrecio(min:number,max:number):Observable<Book[]>{
-    let url="http://localhost:10000/libreria/librosPorPrecio/"+min+"/"+max;
+    let url="http://localhost:11000/slibreria/libreria/librosPorPrecio/"+min+"/"+max;
     return this.http.get<Book[]>(url);
   }
 }
